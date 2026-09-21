@@ -1,0 +1,57 @@
+# The game's own files. Never commit these: they are the disc you own, and
+# this repository ships no game content of any kind.
+/game/
+*.xbe
+*.iso
+*.xmv
+
+# Recompiled game code. `src/recomp/gen/` is a million lines of C translated
+# from the title's executable, so it is game code wearing a different hat and
+# must not be committed or redistributed either. It is regenerated from your
+# own copy in a couple of minutes.
+/src/recomp/gen/
+/out/
+
+# Analysis the pipeline writes beside the XBE.
+*_analysis.json
+*_xdk_symbols.json
+
+# Build output
+/build/
+build*/
+*.obj
+*.o
+*.lib
+*.a
+*.exe
+*.dll
+*.pdb
+*.ilk
+*.exp
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.sln
+
+# Runtime output
+*.log
+*.bmp
+/runs/
+
+# Editors and OS
+.vs/
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+.DS_Store
+
+# Frames captured from the running game, for comparing display modes.
+# Pictures of the game are game content: useful locally, never committed.
+/widescreen-comparison/
